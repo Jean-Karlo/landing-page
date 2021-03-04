@@ -1,0 +1,410 @@
+:root{
+    --white-color: #ffffff;
+    --primary-color: #0A1128;
+    --light-gray-color: #EEEEEE;
+    --gap: 3rem;
+}
+
+/* ------ Reset ------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*------ Font-size em rem 1rem = 10px ------*/
+html {
+    font-size: 62.5%;
+}
+
+/* Configuração de Elementos*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 5.5rem;
+}
+
+h3{
+    font-size: 5rem;
+}
+
+h4{
+    font-size: 4.5rem;
+}
+
+h5{
+    font-size: 4rem;
+}
+
+h6{
+    font-size: 3.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*------ Background ------*/
+.main-bg {
+    background-image: url(../img/main-bg.svg);
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+
+.white-bg {
+    color: var(white-color);
+}
+
+/*------ Main ------*/
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: var(--gap);
+    padding-top: 8rem ;
+}
+
+.section {
+    min-height: 100vh;
+    
+}
+
+/*---- Home Section ----*/
+
+section#home {
+    margin-top: -4.9rem;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+}
+
+.intro-text {
+    width: 40%;
+}
+
+.intro-img {
+    width: 60%;
+}
+
+.intro-text h2 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.intro-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*---- Text Section ----*/
+
+.text-content {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column ; 
+    text-align: center;
+    justify-content: center;
+    max-width: 64rem;
+}
+
+.text-content h2, .text-content p{
+    margin-bottom: 2rem;
+}
+
+
+/* ---- TOP3 Section ---- */
+
+
+.grid-top3-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    counter-reset: grid-counter;
+    gap: var(--gap);   
+}
+
+.top3-content {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap; 
+    justify-content: center;
+}
+
+
+.top3-description {
+    margin-bottom: 10rem;
+   
+}
+
+.grid-top3-content h3{
+    
+    position: relative;
+    font-size: 3rem;
+    padding-left: 6rem;
+    padding-bottom: 2rem;
+}
+
+.grid-top3-content h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter) ;
+    position: absolute;
+    font-size: 8rem;
+    font-style:italic ;
+    top: -4rem;
+    left: -1rem;
+    transform: rotate(3deg);
+}
+
+/*---- Gallery Section ----*/
+
+.gallery-content {
+    min-height: 100vh;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+
+.gallery-imagens {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+/* ---- Price Section ----*/
+
+.price-content {
+    max-width: 64rem;
+    text-align: center;
+}
+
+.price-content h2, .price-content p{
+    margin-bottom: 2rem;
+}
+
+/*- Table price -*/
+
+.table {
+    overflow-x: auto ;
+}
+
+table {
+    min-width: 36rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table caption {
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+thead th, tfoot td {
+    background-color: var(--light-gray-color);
+}
+
+table td, table th {
+    white-space: nowrap;
+    padding: 0.4rem;
+    border: solid 1px var(--light-gray-color);
+    text-align: left;
+}
+
+/*---- Contact Section ----*/
+
+.contact-content  {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.contact-text{
+    width: 40%;
+}
+
+.contact-img {
+    width: 60%;
+}
+
+.contact-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Form */
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-content .form-flex {
+    margin-top: 4rem;
+    border: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--gap) ;
+    
+}
+
+.form-flex legend {
+    font-style: italic;
+    margin-bottom: 3rem;
+}
+
+.form-group {
+    flex: 1 1 320px;
+}
+
+.form-group input , .form-group textarea {
+    font-size: 3rem;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 1.5rem;
+  
+}
+
+.div-area  {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.form-group button {
+    background: none;
+    border: 0.5rem solid var(--white-color);
+    font-size: 3rem;
+    color: var(--white-color);
+    padding: 1.5rem 2rem;
+    transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover {
+    background: var(--white-color);
+    color: black;
+}
+
+
+/*---- Footer ----*/
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    color: var(--primary-color);
+}
+
+.footer p {
+    margin: 0;
+    padding: 3rem;
+}
+
+.close-menu {
+    display: none;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    border: 0.1rem solid var(--primary-color) ;
+}
+
+
+@media (max-width: 800px) {
+    .intro-text, .intro-img, .contact-text, .contact-img {
+        width: 100%;
+    } 
+
+    .intro-content {
+        flex-wrap: wrap;
+    }
+
+    .grid-top3-content, .grid-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-imagens {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .gallery-imagens img {
+        width: 100%;
+    }
+
+    .menu {
+        bottom: 0;
+        text-align: center;
+        display: none;
+    }
+
+    .menu .menu-content, .menu-content ul{
+        flex-direction: column; 
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .close-menu-label::after {
+        content: '≡';
+        position: fixed;
+        z-index: 23;
+        top: 2rem;
+        right: 2rem;
+        background: var(--primary-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+}
